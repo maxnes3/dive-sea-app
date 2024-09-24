@@ -1,0 +1,13 @@
+{
+    "nft" : [
+        {
+            "id": 1,
+            "name": "Sun-Glass",
+            "image": "base64",
+            "bid": 1.75,
+            "endtime": "new Date",
+            "creator": "id",
+            "owner": "id"
+        }
+    ]
+}
