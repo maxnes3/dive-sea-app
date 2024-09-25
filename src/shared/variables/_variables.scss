@@ -1,0 +1,27 @@
+// Color schema
+// primary
+$primary-white: #F9F9F9;
+$primary-black: #141416;
+
+// secondary
+$secondary-gray: #EDEDED;
+
+// text
+$text-primary-white: #FFFFFF;
+$text-primary-black: #000000;
+$text-medium-gray: #606060;
+$text-light-gray: #676767;
+
+
+// Adaptive breakpoints
+$breakpoints: (
+    desktop: (
+        max: 1440px
+    ),
+    laptop: (
+        max: 1024px
+    ),
+    mobile: (
+        max: 375px
+    ),
+);

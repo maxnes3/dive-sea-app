@@ -4,6 +4,7 @@
     "paths": {
       "@shared/*": ["src/shared/*"],
       "@widgets/*": ["src/widgets/*"],
+      "@feature/*": ["src/feature/*"]
     }
   },
   "files": [],

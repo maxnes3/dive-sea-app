@@ -3,6 +3,7 @@ export default interface NFT {
   name: string;
   image: string;
   bid: number;
+  endtime: string;
   creator: number;
   owner: number;
 }
