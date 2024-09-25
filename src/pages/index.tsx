@@ -10,6 +10,7 @@ const Index = () => {
       <Routes>
         {routes.map((route) => (
           <Route
+            key={route.path}
             path={route.path}
             element={<Layout children={route.element} />}
           ></Route>
