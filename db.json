@@ -1,13 +1,23 @@
 {
-    "nft" : [
+    "users" : [
+        {
+            "id": 1,
+            "name": "Perperzon"
+        },
+        {
+            "id": 2,
+            "name": "Videz"
+        }
+    ],
+    "nfts" : [
         {
             "id": 1,
             "name": "Sun-Glass",
-            "image": "base64",
+            "image": "",
             "bid": 1.75,
             "endtime": "new Date",
-            "creator": "id",
-            "owner": "id"
+            "creator": 1,
+            "owner": 2
         }
     ]
 }
