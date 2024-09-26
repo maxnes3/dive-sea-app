@@ -1,0 +1,19 @@
+@import '../variables/variables';
+
+.button {
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &-dark {
+        background-color: $primary-black;
+        border: none;
+        color: $text-primary-white;
+    }
+
+    &-light {
+        background: transparent;
+        border: 1.5px solid $primary-black;
+        color: $text-primary-black;
+    }
+}

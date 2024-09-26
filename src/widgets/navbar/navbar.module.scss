@@ -1,0 +1,30 @@
+@import '../../shared/variables/variables';
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .link {
+        color: $text-medium-gray;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover { text-decoration: underline; }
+    }
+
+    .search {
+        background-color: $secondary-gray;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 15px;
+        border-radius: 14px;
+
+        input {
+            background: transparent;
+            border: none;
+        }
+    }
+}

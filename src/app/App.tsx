@@ -1,5 +1,4 @@
-import './styles/_app.module.scss';
-import Index from '../pages';
+import Index from '@pages/index';
 
 function App() {
   return <Index />;

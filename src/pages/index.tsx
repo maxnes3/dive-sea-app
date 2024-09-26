@@ -1,12 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from '../app/layout/layout';
-import HomePage from './home/home.page';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from '@app/layout/layout';
+import HomePage from '@pages/home/home.page';
 
 const Index = () => {
   const routes = [{ path: '/', element: <HomePage /> }];
 
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         {routes.map((route) => (
           <Route
@@ -16,7 +16,7 @@ const Index = () => {
           ></Route>
         ))}
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 

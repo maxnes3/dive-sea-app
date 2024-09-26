@@ -1,0 +1,26 @@
+// Mixins for generate fonts
+@mixin font-face($name, $weight, $url) {
+    @font-face {
+        font-family: $name;
+        font-style: normal;
+        src: url($url) format('truetype');
+        font-weight: $weight;
+    }
+}
+
+// Poppins
+@include font-face('Poppins', 400, './Poppins/Poppins-Regular.ttf');
+@include font-face('Poppins', 500, './Poppins/Poppins-Medium.ttf');
+@include font-face('Poppins', 600, './Poppins/Poppins-SemiBold.ttf');
+
+// Inter
+@include font-face('Inter', 400, './Inter/Inter-Regular.ttf');
+@include font-face('Inter', 500, './Inter/Inter-Medium.ttf');
+@include font-face('Inter', 600, './Inter/Inter-SemiBold.ttf');
+
+// Mixins for export fonts
+@mixin poppins-font($size, $weight) {
+    font-family: 'Poppins', serif;
+    font-weight: $weight;
+    font-size: $size;
+}

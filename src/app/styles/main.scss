@@ -1,3 +1,6 @@
-@import './app.module', 
-        '../../shared/fonts/fonts.module',
-        '../../shared/variables/variables';
+@import '../../shared/variables/variables';
+
+body {
+    background-color: $primary-white;
+    margin: 0;
+}
