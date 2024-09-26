@@ -1,4 +1,12 @@
 {
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["src/shared/*"],
+      "@widgets/*": ["src/widgets/*"],
+      "@feature/*": ["src/feature/*"]
+    }
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
