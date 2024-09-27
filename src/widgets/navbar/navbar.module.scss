@@ -8,7 +8,7 @@ $adaptive: (
         elements-left-gap: 53px,
         elements-right-gap: 38px,
         logo-size: 53px,
-        link-font: (size: 18px, weight: 500),
+        link-font: (size: 17.83px, weight: 500),
         search-font: (size: 15px, weight: 500),
         search-padding: 15px,
         search-width: 350px,
@@ -20,7 +20,7 @@ $adaptive: (
         elements-left-gap: 38px,
         elements-right-gap: 20px,
         logo-size: 38px,
-        link-font: (size: 13px, weight: 500),
+        link-font: (size: 12.68px, weight: 500),
         search-font: (size: 11px, weight: 500),
         search-padding: 12.5px,
         search-width: 250px,
@@ -67,6 +67,7 @@ $adaptive: (
             align-items: center;
             justify-content: flex-start;
             border-radius: 14px;
+            box-sizing: border-box;
             @include set-adaptive($adaptive, padding, search-padding);
             @include set-adaptive($adaptive, width, search-width);
             @include set-adaptive($adaptive, gap, search-gap);
@@ -94,7 +95,7 @@ $adaptive: (
             }
 
             .menu {
-
+                
             }
         }
     }
