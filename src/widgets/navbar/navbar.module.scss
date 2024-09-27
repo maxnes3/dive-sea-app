@@ -1,14 +1,31 @@
-@import '../../shared/variables/variables',
-        '../../shared/adaptive/adaptive';
+@import '@shared/variables/variables',
+        '@shared/adaptive/adaptive',
+        '@shared/fonts/fonts';
 
 $adaptive: (
     desktop: (
-        link: (size: 18px, weight: 500),
-        search: (size: 15px, weight: 500)
+        navbar-padding: 35px,
+        elements-left-gap: 53px,
+        elements-right-gap: 38px,
+        logo-size: 53px,
+        link-font: (size: 18px, weight: 500),
+        search-font: (size: 15px, weight: 500),
+        search-padding: 15px,
+        search-width: 350px,
+        search-gap: 20px,
+        icon-size: 21.51px
     ),
     laptop: (
-        link: (size: 13px, weight: 500),
-        search: (size: 11px, weight: 500)
+        navbar-padding: 25px,
+        elements-left-gap: 38px,
+        elements-right-gap: 20px,
+        logo-size: 38px,
+        link-font: (size: 13px, weight: 500),
+        search-font: (size: 11px, weight: 500),
+        search-padding: 12.5px,
+        search-width: 250px,
+        search-gap: 15px,
+        icon-size: 15.3px
     )
 );
 
@@ -16,31 +33,69 @@ $adaptive: (
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include set-adaptive($adaptive, padding-top, navbar-padding);
 
-    .link {
-        color: $text-medium-gray;
-        text-transform: uppercase;
-        text-decoration: none;
-        @include set-adaptive-mixin($adaptive, inter-font, link);
-
-        &:hover { text-decoration: underline; }
-    }
-
-    .search {
-        background-color: $secondary-gray;
+    .elements {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        padding: 15px;
-        border-radius: 14px;
+        flex-direction: row;
 
-        input {
-            background: transparent;
-            border: none;
-            @include set-adaptive-mixin($adaptive, poppins-font, search);
+        &_left { @include set-adaptive($adaptive, gap, elements-left-gap); }
+        &_right { @include set-adaptive($adaptive, gap, elements-right-gap); }
 
-            &:focus { outline: none; }
+        .logo {
+            @include set-adaptive($adaptive, width, logo-size);
+            @include set-adaptive($adaptive, height, logo-size);
+        }
+
+        .title {
+            @include poppins-font(21.36px, 600);
+        }
+
+        .link {
+            color: $text-medium-gray;
+            text-transform: uppercase;
+            text-decoration: none;
+            @include set-adaptive-mixin($adaptive, inter-font, link-font);
+    
+            &:hover { text-decoration: underline; }
+        }
+
+        .search {
+            background-color: $secondary-gray;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            border-radius: 14px;
+            @include set-adaptive($adaptive, padding, search-padding);
+            @include set-adaptive($adaptive, width, search-width);
+            @include set-adaptive($adaptive, gap, search-gap);
+
+            .icon {
+                @include set-adaptive($adaptive, width, icon-size);
+                @include set-adaptive($adaptive, height, icon-size);
+            }
+    
+            input {
+                background: transparent;
+                border: none;
+                padding: 0;
+                width: 100%;
+                @include set-adaptive-mixin($adaptive, poppins-font, search-font);
+    
+                &:focus { outline: none; }
+            }
+        }
+
+        .burger {
+            .toggle {
+                border: none;
+                background: transparent;
+            }
+
+            .menu {
+
+            }
         }
     }
 }

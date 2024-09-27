@@ -1,33 +1,42 @@
-@import '../variables/variables',
-        '../adaptive/adaptive',
-        '../fonts/fonts';
-
+@import '@shared/variables/variables',
+        '@shared/adaptive/adaptive',
+        '@shared/fonts/fonts';
 
 $adaptive: (
     desktop: (
-        button: (size: 16px, weight: 600)
+        inter: (size: 16px, weight: 600),
+        width: 200px,
+        height: 57px
     ),
     laptop: (
-        button: (size: 12px, weight: 600)
+        inter: (size: 12px, weight: 600),
+        width: 142px,
+        height: 41px
     )
 );
 
-.button {
+@mixin button {
     text-align: center;
     text-transform: uppercase;
-    cursor: pointer;
     border-radius: 14px;
-    @include set-adaptive-mixin($adaptive, inter-font, button);
+    cursor: pointer;
+    @include set-adaptive-mixin($adaptive, inter-font, inter);
+    @include set-adaptive($adaptive, width, width);
+    @include set-adaptive($adaptive, height, height);
+}
 
+.button {
     &-dark {
         background-color: $primary-black;
         border: none;
         color: $text-primary-white;
+        @include button;
     }
 
     &-light {
         background: transparent;
         border: 1.5px solid $primary-black;
         color: $text-primary-black;
+        @include button;
     }
 }
