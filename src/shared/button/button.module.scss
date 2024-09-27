@@ -1,9 +1,23 @@
-@import '../variables/variables';
+@import '../variables/variables',
+        '../adaptive/adaptive',
+        '../fonts/fonts';
+
+
+$adaptive: (
+    desktop: (
+        button: (size: 16px, weight: 600)
+    ),
+    laptop: (
+        button: (size: 12px, weight: 600)
+    )
+);
 
 .button {
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
+    border-radius: 14px;
+    @include set-adaptive-mixin($adaptive, inter-font, button);
 
     &-dark {
         background-color: $primary-black;

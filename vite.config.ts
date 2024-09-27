@@ -27,4 +27,5 @@ export default defineConfig({
       '@feature': path.resolve(__dirname, 'src/feature'),
     },
   },
+  assetsInclude: ['**/*.ttf'],
 });

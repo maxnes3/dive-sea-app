@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { ButtonSchema } from '@shared/constants/constants';
-import './button.module.scss';
+import styles from './button.module.scss';
 
 type ButtonProps = {
   text: string;
@@ -10,7 +10,7 @@ type ButtonProps = {
 
 function Button({ text, schema, icon }: ButtonProps) {
   return (
-    <button className={`${schema}`}>
+    <button className={styles[schema]}>
       {icon}
       {text}
     </button>

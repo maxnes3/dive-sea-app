@@ -2,8 +2,8 @@
 @mixin font-face($name, $weight, $url) {
     @font-face {
         font-family: $name;
-        font-style: normal;
         src: url($url) format('truetype');
+        font-style: normal;
         font-weight: $weight;
     }
 }
@@ -21,6 +21,12 @@
 // Mixins for export fonts
 @mixin poppins-font($size, $weight) {
     font-family: 'Poppins', serif;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+@mixin inter-font($size, $weight) {
+    font-family: 'Inter', sans-serif;
     font-weight: $weight;
     font-size: $size;
 }

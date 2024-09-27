@@ -1,4 +1,16 @@
-@import '../../shared/variables/variables';
+@import '../../shared/variables/variables',
+        '../../shared/adaptive/adaptive';
+
+$adaptive: (
+    desktop: (
+        link: (size: 18px, weight: 500),
+        search: (size: 15px, weight: 500)
+    ),
+    laptop: (
+        link: (size: 13px, weight: 500),
+        search: (size: 11px, weight: 500)
+    )
+);
 
 .navbar {
     display: flex;
@@ -9,6 +21,7 @@
         color: $text-medium-gray;
         text-transform: uppercase;
         text-decoration: none;
+        @include set-adaptive-mixin($adaptive, inter-font, link);
 
         &:hover { text-decoration: underline; }
     }
@@ -25,6 +38,9 @@
         input {
             background: transparent;
             border: none;
+            @include set-adaptive-mixin($adaptive, poppins-font, search);
+
+            &:focus { outline: none; }
         }
     }
 }

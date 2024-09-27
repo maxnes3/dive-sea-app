@@ -1,4 +1,19 @@
+@import '../../shared/adaptive/adaptive';
+
+$adaptive: (
+    desktop: (
+        container: 1240px
+    ),
+    laptop: (
+        container: 886px
+    ),
+    mobile: (
+        container: 315px
+    ),
+);
+
 .container {
     position: relative;
     margin: 0 auto;
+    @include set-adaptive($adaptive, max-width, container);
 }
